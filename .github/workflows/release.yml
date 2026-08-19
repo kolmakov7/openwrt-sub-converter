@@ -16,12 +16,16 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - label: aarch64_cortex-a53
-            variant: snapshot
-            sdk: aarch64_cortex-a53-main
-          - label: aarch64_cortex-a53
-            variant: openwrt-24.10
-            sdk: aarch64_cortex-a53-openwrt-24.10
+          - { label: arm_cortex-a9,          variant: snapshot,     sdk: arm_cortex-a9-main }
+          - { label: arm_cortex-a9,          variant: openwrt-24.10, sdk: arm_cortex-a9-openwrt-24.10 }
+          - { label: aarch64_cortex-a53,     variant: snapshot,     sdk: aarch64_cortex-a53-main }
+          - { label: aarch64_cortex-a53,     variant: openwrt-24.10, sdk: aarch64_cortex-a53-openwrt-24.10 }
+          - { label: mips64el_mips64r2,      variant: snapshot,     sdk: mips64el_mips64r2-main }
+          - { label: mips64el_mips64r2,      variant: openwrt-24.10, sdk: mips64el_mips64r2-openwrt-24.10 }
+          - { label: mipsel_24kc,            variant: snapshot,     sdk: mipsel_24kc-main }
+          - { label: mipsel_24kc,            variant: openwrt-24.10, sdk: mipsel_24kc-openwrt-24.10 }
+          - { label: x86_64,                 variant: snapshot,     sdk: x86_64-main }
+          - { label: x86_64,                 variant: openwrt-24.10, sdk: x86_64-openwrt-24.10 }
 
     steps:
       - name: Checkout
@@ -33,12 +37,12 @@ jobs:
         uses: openwrt/gh-action-sdk@main
         env:
           ARCH: ${{ matrix.sdk }}
-          FEEDNAME: sub-converter
+          FEEDNAME: subconverter
           PACKAGES: sub-converter luci-app-sub-converter
 
       - name: Verify packages were built
         env:
-          FEEDNAME: sub-converter
+          FEEDNAME: subconverter
         run: sh .github/scripts/verify-built-packages.sh
 
       - name: Upload package artifacts
@@ -46,8 +50,8 @@ jobs:
         with:
           name: ${{ matrix.label }}-${{ matrix.variant }}-packages
           path: |
-            bin/packages/**/sub-converter/sub-converter*
-            bin/packages/**/sub-converter/luci-app-sub-converter*
+            bin/packages/**/subconverter/sub-converter*
+            bin/packages/**/subconverter/luci-app-sub-converter*
           if-no-files-found: error
 
   release:
@@ -67,7 +71,7 @@ jobs:
       - name: Bundle per-architecture package archives
         run: |
           chmod +x .github/scripts/bundle-arch-packages.sh
-          sh .github/scripts/bundle-arch-packages.sh aarch64_cortex-a53
+          sh .github/scripts/bundle-arch-packages.sh arm_cortex-a9 aarch64_cortex-a53 mips64el_mips64r2 mipsel_24kc x86_64
 
       - name: Create release
         uses: softprops/action-gh-release@v2
