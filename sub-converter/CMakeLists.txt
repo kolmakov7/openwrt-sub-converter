@@ -18,3 +18,5 @@ include(CTest)
 if(BUILD_TESTING)
   add_subdirectory(tests)
 endif()
+
+install(TARGETS subconvd RUNTIME DESTINATION usr/sbin)
