@@ -31,12 +31,12 @@ jobs:
         uses: openwrt/gh-action-sdk@main
         env:
           ARCH: ${{ matrix.sdk }}
-          FEEDNAME: sub-converter
+          FEEDNAME: subconverter
           PACKAGES: sub-converter luci-app-sub-converter
 
       - name: Verify packages were built
         env:
-          FEEDNAME: sub-converter
+          FEEDNAME: subconverter
         run: sh .github/scripts/verify-built-packages.sh
 
       - name: Upload package artifacts
@@ -44,8 +44,8 @@ jobs:
         with:
           name: ${{ matrix.label }}-packages
           path: |
-            bin/packages/**/sub-converter/sub-converter*
-            bin/packages/**/sub-converter/luci-app-sub-converter*
+            bin/packages/**/subconverter/sub-converter*
+            bin/packages/**/subconverter/luci-app-sub-converter*
           if-no-files-found: error
 
   release:
