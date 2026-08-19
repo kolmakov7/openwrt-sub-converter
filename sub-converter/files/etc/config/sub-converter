@@ -1,0 +1,12 @@
+# UCI configuration for the OpenWRT Sub Converter daemon.
+config service 'main'
+	option enabled '1'
+	option listen '0.0.0.0'
+	option port '9099'
+
+	# Options below are reserved for milestone M6.
+	# option timeout '30'
+	# option max_response '2097152'
+	# option max_headers '16384'
+	# list allowed_hosts '127.0.0.1'
+	# list allowed_hosts '::1'

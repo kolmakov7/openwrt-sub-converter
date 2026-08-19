@@ -1,0 +1,2 @@
+vless://00000000-0000-4000-8000-000000000001@ee10.proxy.example.com:50068?encryption=none&type=ws&security=none#Test%20Node%20A
+vless://00000000-0000-4000-8000-000000000001@sport.proxy.example.com:443?encryption=none&type=ws&security=tls&sni=sport.proxy.example.com#Test%20Node%20B

@@ -1,0 +1,77 @@
+name: Develop Build
+
+on:
+  push:
+    branches:
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: ${{ matrix.label }} (${{ matrix.sdk }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: snapshot
+            sdk: aarch64_cortex-a53-main
+          - label: openwrt-24.10
+            sdk: aarch64_cortex-a53-openwrt-24.10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build packages
+        uses: openwrt/gh-action-sdk@main
+        env:
+          ARCH: ${{ matrix.sdk }}
+          FEEDNAME: sub-converter
+          PACKAGES: sub-converter luci-app-sub-converter
+
+      - name: Verify packages were built
+        env:
+          FEEDNAME: sub-converter
+        run: sh .github/scripts/verify-built-packages.sh
+
+      - name: Upload package artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.label }}-packages
+          path: |
+            bin/packages/**/sub-converter/sub-converter*
+            bin/packages/**/sub-converter/luci-app-sub-converter*
+          if-no-files-found: error
+
+  release:
+    name: Publish continuous pre-release
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+
+      - name: Bundle package archive (apk + ipk)
+        run: |
+          chmod +x .github/scripts/bundle-arch-packages.sh
+          DEVELOP_BUNDLE=1 DEVELOP_LABEL=aarch64_cortex-a53 sh .github/scripts/bundle-arch-packages.sh
+
+      - name: Publish continuous pre-release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: continuous
+          name: Continuous build
+          prerelease: true
+          files: dist/sub-converter-aarch64_cortex-a53-packages.tar.gz
+          generate_release_notes: true

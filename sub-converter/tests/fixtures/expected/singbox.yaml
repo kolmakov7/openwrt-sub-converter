@@ -1,0 +1,604 @@
+proxies:
+  - name: 🇪🇺 Авто - proxy
+    type: vless
+    server: ee10.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-2
+    type: vless
+    server: ddnl0.proxy.example.com
+    port: 50623
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: xhttp
+    tls: true
+    servername: cdn.example.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: TESTREALITYPUBLICKEY00000000000000000000000
+      short-id: "000000000001"
+    xhttp-opts:
+      host: cdn.example.com
+      path: /IStoreBrowseService/GetItems/v1
+      mode: auto
+  - name: 🇪🇺 Авто - proxy-3
+    type: vless
+    server: pl.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-4
+    type: vless
+    server: de1.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-5
+    type: vless
+    server: ddnl0.proxy.example.com
+    port: 50623
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: xhttp
+    tls: true
+    servername: cdn.example.com
+    client-fingerprint: ios
+    reality-opts:
+      public-key: TESTREALITYPUBLICKEY00000000000000000000000
+      short-id: "000000000002"
+    xhttp-opts:
+      host: cdn.example.com
+      path: /IStoreBrowseService/GetItems/v1
+      mode: auto
+  - name: 🇪🇺 Авто - proxy-6
+    type: vless
+    server: yt3.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000002
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-7
+    type: vless
+    server: yt3.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000004
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-8
+    type: vless
+    server: yt3.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000003
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-9
+    type: vless
+    server: ai.us.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-10
+    type: vless
+    server: by.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-11
+    type: vless
+    server: ee10.proxy.example.com
+    port: 56085
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-12
+    type: vless
+    server: hk.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-13
+    type: vless
+    server: lt.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-14
+    type: vless
+    server: ddb.proxy.example.com
+    port: 56010
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-15
+    type: vless
+    server: kz.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇺 Авто - proxy-16
+    type: vless
+    server: ee10.proxy.example.com
+    port: 56086
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇪 🎮 Эстония ♾️
+    type: vless
+    server: ee10.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇳🇱 ⭐️ Нидерланды ♾️
+    type: vless
+    server: ddnl0.proxy.example.com
+    port: 50623
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: xhttp
+    tls: true
+    servername: cdn.example.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: TESTREALITYPUBLICKEY00000000000000000000000
+      short-id: "000000000001"
+    xhttp-opts:
+      host: cdn.example.com
+      path: /IStoreBrowseService/GetItems/v1
+      mode: auto
+  - name: 🏳️ LTE
+    type: vless
+    server: sport.proxy.example.com
+    port: 443
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: true
+    servername: sport.proxy.example.com
+    ws-opts:
+      path: /gateway/v1/ws/00000000000000000000000000000000
+      headers:
+        Host: ""
+  - name: 🇷🇺 Универсальная ♾️
+    type: vless
+    server: yt3.proxy.example.com
+    port: 56185
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇷🇺 YouTube без рекламы ♾️
+    type: vless
+    server: dds-ru0.proxy.example.com
+    port: 56185
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇵🇱 🚀 Польша ♾️
+    type: vless
+    server: pl.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇩🇪 🚀 Германия ♾️
+    type: vless
+    server: de1.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇳🇱 🚀 Нидерланды ♾️
+    type: vless
+    server: ddnl0.proxy.example.com
+    port: 50623
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: xhttp
+    tls: true
+    servername: cdn.example.com
+    client-fingerprint: ios
+    reality-opts:
+      public-key: TESTREALITYPUBLICKEY00000000000000000000000
+      short-id: "000000000002"
+    xhttp-opts:
+      host: cdn.example.com
+      path: /IStoreBrowseService/GetItems/v1
+      mode: auto
+  - name: 🇦🇺 Австралия ♾️
+    type: vless
+    server: yt3.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000002
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇪🇸 Испания ♾️
+    type: vless
+    server: yt3.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000004
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇹🇷 Турция ♾️
+    type: vless
+    server: yt3.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000003
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇺🇸 ⭐️ TikTok | Gemini
+    type: vless
+    server: ai.us.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇧🇾 Беларусь ♾️
+    type: vless
+    server: by.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇸🇪 Швеция ♾️
+    type: vless
+    server: ee10.proxy.example.com
+    port: 56085
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇭🇰 Гонконг ♾️
+    type: vless
+    server: hk.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇱🇹 Литва ♾️
+    type: vless
+    server: lt.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇦🇲 Армения ♾️
+    type: vless
+    server: ddb.proxy.example.com
+    port: 56010
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇰🇿 Казахстан ♾️
+    type: vless
+    server: kz.proxy.example.com
+    port: 50068
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+  - name: 🇫🇷 Франция ♾️
+    type: vless
+    server: ee10.proxy.example.com
+    port: 56086
+    uuid: 00000000-0000-4000-8000-000000000001
+    udp: true
+    network: ws
+    tls: false
+    ws-opts:
+      path: ""
+      headers:
+        Host: ""
+proxy-groups:
+  - name: 🇪🇺 Авто
+    type: select
+    proxies:
+      - 🇪🇺 Авто - proxy
+      - 🇪🇺 Авто - proxy-2
+      - 🇪🇺 Авто - proxy-3
+      - 🇪🇺 Авто - proxy-4
+      - 🇪🇺 Авто - proxy-5
+      - 🇪🇺 Авто - proxy-6
+      - 🇪🇺 Авто - proxy-7
+      - 🇪🇺 Авто - proxy-8
+      - 🇪🇺 Авто - proxy-9
+      - 🇪🇺 Авто - proxy-10
+      - 🇪🇺 Авто - proxy-11
+      - 🇪🇺 Авто - proxy-12
+      - 🇪🇺 Авто - proxy-13
+      - 🇪🇺 Авто - proxy-14
+      - 🇪🇺 Авто - proxy-15
+      - 🇪🇺 Авто - proxy-16
+      - DIRECT
+  - name: 🇪🇺 Авто - auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇪🇺 Авто - proxy
+      - 🇪🇺 Авто - proxy-2
+      - 🇪🇺 Авто - proxy-3
+      - 🇪🇺 Авто - proxy-4
+      - 🇪🇺 Авто - proxy-5
+      - 🇪🇺 Авто - proxy-6
+      - 🇪🇺 Авто - proxy-7
+      - 🇪🇺 Авто - proxy-8
+      - 🇪🇺 Авто - proxy-9
+      - 🇪🇺 Авто - proxy-10
+      - 🇪🇺 Авто - proxy-11
+      - 🇪🇺 Авто - proxy-12
+      - 🇪🇺 Авто - proxy-13
+      - 🇪🇺 Авто - proxy-14
+      - 🇪🇺 Авто - proxy-15
+      - 🇪🇺 Авто - proxy-16
+  - name: 🇪🇪 🎮 Эстония ♾️
+    type: select
+    proxies:
+      - 🇪🇪 🎮 Эстония ♾️
+      - DIRECT
+  - name: 🇳🇱 ⭐️ Нидерланды ♾️
+    type: select
+    proxies:
+      - 🇳🇱 ⭐️ Нидерланды ♾️
+      - DIRECT
+  - name: 🏳️ LTE
+    type: select
+    proxies:
+      - 🏳️ LTE
+      - DIRECT
+  - name: 🇷🇺 Универсальная ♾️
+    type: select
+    proxies:
+      - 🇷🇺 Универсальная ♾️
+      - DIRECT
+  - name: 🇷🇺 YouTube без рекламы ♾️
+    type: select
+    proxies:
+      - 🇷🇺 YouTube без рекламы ♾️
+      - DIRECT
+  - name: 🇵🇱 🚀 Польша ♾️
+    type: select
+    proxies:
+      - 🇵🇱 🚀 Польша ♾️
+      - DIRECT
+  - name: 🇩🇪 🚀 Германия ♾️
+    type: select
+    proxies:
+      - 🇩🇪 🚀 Германия ♾️
+      - DIRECT
+  - name: 🇳🇱 🚀 Нидерланды ♾️
+    type: select
+    proxies:
+      - 🇳🇱 🚀 Нидерланды ♾️
+      - DIRECT
+  - name: 🇦🇺 Австралия ♾️
+    type: select
+    proxies:
+      - 🇦🇺 Австралия ♾️
+      - DIRECT
+  - name: 🇪🇸 Испания ♾️
+    type: select
+    proxies:
+      - 🇪🇸 Испания ♾️
+      - DIRECT
+  - name: 🇹🇷 Турция ♾️
+    type: select
+    proxies:
+      - 🇹🇷 Турция ♾️
+      - DIRECT
+  - name: 🇺🇸 ⭐️ TikTok | Gemini
+    type: select
+    proxies:
+      - 🇺🇸 ⭐️ TikTok | Gemini
+      - DIRECT
+  - name: 🇧🇾 Беларусь ♾️
+    type: select
+    proxies:
+      - 🇧🇾 Беларусь ♾️
+      - DIRECT
+  - name: 🇸🇪 Швеция ♾️
+    type: select
+    proxies:
+      - 🇸🇪 Швеция ♾️
+      - DIRECT
+  - name: 🇭🇰 Гонконг ♾️
+    type: select
+    proxies:
+      - 🇭🇰 Гонконг ♾️
+      - DIRECT
+  - name: 🇱🇹 Литва ♾️
+    type: select
+    proxies:
+      - 🇱🇹 Литва ♾️
+      - DIRECT
+  - name: 🇦🇲 Армения ♾️
+    type: select
+    proxies:
+      - 🇦🇲 Армения ♾️
+      - DIRECT
+  - name: 🇰🇿 Казахстан ♾️
+    type: select
+    proxies:
+      - 🇰🇿 Казахстан ♾️
+      - DIRECT
+  - name: 🇫🇷 Франция ♾️
+    type: select
+    proxies:
+      - 🇫🇷 Франция ♾️
+      - DIRECT
+  - name: PROXY
+    type: select
+    proxies:
+      - 🇪🇺 Авто
+      - 🇪🇪 🎮 Эстония ♾️
+      - 🇳🇱 ⭐️ Нидерланды ♾️
+      - 🏳️ LTE
+      - 🇷🇺 Универсальная ♾️
+      - 🇷🇺 YouTube без рекламы ♾️
+      - 🇵🇱 🚀 Польша ♾️
+      - 🇩🇪 🚀 Германия ♾️
+      - 🇳🇱 🚀 Нидерланды ♾️
+      - 🇦🇺 Австралия ♾️
+      - 🇪🇸 Испания ♾️
+      - 🇹🇷 Турция ♾️
+      - 🇺🇸 ⭐️ TikTok | Gemini
+      - 🇧🇾 Беларусь ♾️
+      - 🇸🇪 Швеция ♾️
+      - 🇭🇰 Гонконг ♾️
+      - 🇱🇹 Литва ♾️
+      - 🇦🇲 Армения ♾️
+      - 🇰🇿 Казахстан ♾️
+      - 🇫🇷 Франция ♾️
+      - DIRECT
